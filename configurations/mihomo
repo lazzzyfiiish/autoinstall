@@ -71,4 +71,8 @@ external-ui: ./ui' $IKUN
 
 
 sudo mkdir /etc/mihomo
+
 sudo mv $IKUN /etc/mihomo/config.yaml
+
+sudo wget -O Country.mmdb /etc/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+sudo cp Country.mmdb /etc/mihomo
