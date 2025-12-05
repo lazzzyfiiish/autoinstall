@@ -1,3 +1,4 @@
-git clone https://aur.archlinux.org/paru-bin.git
-cd paru-bin
+git clone https://aur.archlinux.org/paru-bin.git ~/paru-bin
+cd ~/paru-bin
 makepkg -si
+cd ~

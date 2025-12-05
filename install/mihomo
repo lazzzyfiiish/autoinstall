@@ -2,4 +2,5 @@ sudo pacman -S wget
 wget -c -t 20 -T 3 -O mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v1.19.16/mihomo-linux-amd64-v1.19.16.gz
 
 gunzip -d mihomo.gz
+chmod +x mihomo
 sudo mv mihomo /usr/local/bin/

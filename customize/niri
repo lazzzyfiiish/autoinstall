@@ -1,0 +1,51 @@
+#!/bin/bash
+NIRI=$HOME/.config/niri/config.kdl
+
+# Delete
+sed -i '/^\s*\/\//d' "$@" $NIRI  # Delete comments
+sed -i 's/Mod+D/d' $NIRI # Delete Mod+D
+
+# Insert & Append
+sed -i '/output "eDP-1"/i\
+output "HDMI-A-1" {\
+    mode "1920x1080@120.000"\
+    scale 1\
+    transform "normal"\
+    position x=0 y=0\
+    focus-at-startup\
+    }\
+\
+output "eDP-1" {\
+    mode "1920x1080@60.052"\
+    scale 1.25\
+    transform "normal"\
+    position x=0 y=1080\
+    }\
+' $NIRI
+
+sed -i 's/alacritty/kitty/g' $NIRI
+
+
+sed -i '/kitty/i\
+    Mod+D { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher" "toggle"; }\
+' $NIRI
+
+cat << EOF >> $NIRI 
+window-rule {
+  geometry-corner-radius 20
+  clip-to-geometry true
+}
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+cursor {
+    hide-when-typing
+}
+EOF
+
+echo 'spawn-at-startup "qs" "-c" "noctalia-shell"' >> $NIRI
+echo 'prefer-no-csd' >> $NIRI

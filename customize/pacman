@@ -1,0 +1,8 @@
+PACMAN=/etc/pacman.conf
+
+sudo sed -i 's/^#Color/Color/g' $PACMAN
+
+sudo sed -i '/^#\[multilib\]/i\
+[multilib]\
+Include = /etc/pacman.d/mirrorlist\
+' $PACMAN

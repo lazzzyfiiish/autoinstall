@@ -1,0 +1,3 @@
+PARU=/etc/paru.conf
+
+sudo sed -i 's/^#BottomUp/BottomUp/g' $PARU

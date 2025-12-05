@@ -1,1 +1,3 @@
-sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-breeze fcitx5-chinse-addons fcitx5-pinyin-zhwiki 
+sudo pacman -S fcitx5 fcitx5-qt fcitx5-gtk \
+fcitx5-chinse-addons fcitx5-pinyin-zhwiki \
+fcitx5-breeze

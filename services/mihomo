@@ -1,3 +1,4 @@
+#!/bin/bash
 cat >  mihomo.service << EOF
 [Unit]
 Description=mihomo Daemon, Another Clash Kernel.
