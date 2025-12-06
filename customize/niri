@@ -7,7 +7,7 @@ sed -i 's/fuzzel/d' $NIRI # Delete Mod+D
 
 # Insert & Append
 sed -i '/output "eDP-1"/i\
-output "HDMI-A-1" {\
+output "PNP(SAC) N50pro 6 0x00000001" {\
     mode "1920x1080@120.000"\
     scale 1\
     transform "normal"\
