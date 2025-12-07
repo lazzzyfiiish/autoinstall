@@ -3,3 +3,6 @@ git clone https://aur.archlinux.org/paru-bin.git ~/paru-bin
 cd ~/paru-bin
 makepkg -si
 cd ~
+PARU=/etc/paru.conf
+
+sudo sed -i 's/^#BottomUp/BottomUp/g' $PARU

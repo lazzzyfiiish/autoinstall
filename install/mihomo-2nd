@@ -1,6 +1,0 @@
-git clone https://aur.archlinux.org/mihomo-bin.git ~/mihomo-bin
-
-cd ~/mihomo-bin
-makepkg -si
-
-cd ~

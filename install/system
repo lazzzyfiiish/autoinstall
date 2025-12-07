@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# pacman \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+PACMAN=/etc/pacman.conf
+sudo sed -i 's/^#Color/Color/g' $PACMAN
+sudo sed -i '/^#\[multilib\]/i\
+[multilib]\
+Include = /etc/pacman.d/mirrorlist\
+' $PACMAN
+
+# swap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
+
+# environment \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo echo "QT_QPA_PLATFORMTHEME=gtk3" >> /etc/environment
