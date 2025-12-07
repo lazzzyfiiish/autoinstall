@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo "NVIDIA, AMD or Intel ?"
+echo "(1) Nvidia"
+echo "(2) AMD"
+echo "(3) Intel"
+
+read -r -p "Number: " NUM
+
+case "$NUM" in
+	1)
+		[commands]
+	;;
+	2)
+	;;
+	3)
+	;;
+esac

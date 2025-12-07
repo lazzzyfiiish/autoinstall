@@ -1,0 +1,1 @@
+paru -S cloudflared nginx syncthing

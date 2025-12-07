@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # Packages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-paru -S ly xdg-desktop-portal-gtk xdg-desktop-portal-gnome niri kitty xwayland-satellite \
+paru -S ly \
+noto-fonts noto-fonts-cjk noto-fonts-emoji \
+xdg-desktop-portal-gtk xdg-desktop-portal-gnome niri kitty xwayland-satellite \
 noctalia-shell cliphist matugen cava wlsunset power-profiles-daemon ddcutil 
 
 
@@ -61,6 +63,8 @@ EOF
 
 mkdir -p $HOME/.config/niri
 mv $NIRI ./.config/niri/
+
+sudo echo "QT_QPA_PLATFORMTHEME=gtk3" >> /etc/environment
 
 # Services \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 systemctl enable ly

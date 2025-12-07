@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Which Model?"
+echo "(1) Dell Inspiron 15 GAMING 5577"
+echo "(2) Dell Inspiron 15 GAMING 5576"
+echo "(3) Others (AMD or NVIDIA)"
+
+read -r -p "Number: " NUM
+
+case "$NUM" in
+	1)
+		bash ./install/TREES/DELL_INSPIRON_15_5577
+	;;
+	2)
+		bash ./install/TREES/DELL_INSPIRON_15_5576
+	;;
+	3)
+		bash ./install/TREES/I_N_A
+	;;
+esac

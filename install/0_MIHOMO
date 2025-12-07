@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# Packages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+# Packages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo pacman -S wget
 wget https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt
 VERSION=$(<version.txt)
 wget -c -t 20 -T 3 -O mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/mihomo-linux-amd64-v${VERSION}.gz

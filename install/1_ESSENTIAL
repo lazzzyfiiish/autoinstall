@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# AUR \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin
+makepkg -si
+
+PARU=/etc/paru.conf
+sudo sed -i 's/^#BottomUp/BottomUp/g' $PARU
+
 # pacman \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 PACMAN=/etc/pacman.conf
 sudo sed -i 's/^#Color/Color/g' $PACMAN
@@ -10,6 +18,3 @@ Include = /etc/pacman.d/mirrorlist\
 
 # swap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
-
-# environment \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-sudo echo "QT_QPA_PLATFORMTHEME=gtk3" >> /etc/environment

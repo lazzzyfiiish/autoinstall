@@ -7,7 +7,7 @@ read -r -p "Number: " NUM
 
 case "$NUM" in
 	1)
-		bash ./enviroments/desktop
+		bash ./enviroments/client
 	;;
 	2)
 		bash ./enviroments/server
