@@ -101,5 +101,4 @@ EOF
 
 sudo mv mihomo.service /etc/systemd/system/
 sudo systemctl daemon-reload
-sudo systemctl enable mihomo
-sudo systemctl start mihomo
+sudo systemctl enable --now mihomo

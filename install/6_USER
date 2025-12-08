@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Input Method \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-paru -S fcitx5 fcitx5-qt fcitx5-gtk fcitx5-configtool\
+paru -S fcitx5-im \
 fcitx5-chinese-addons fcitx5-pinyin-zhwiki \
 fcitx5-breeze
 

@@ -9,8 +9,9 @@ swayidle
 
 
 # Configurations \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-wget -O niri_config https://raw.githubusercontent.com/YaLTeR/niri/refs/heads/main/resources/default-config.kdl
-NIRI=niri_config
+mkdir -p $HOME/.config/niri
+cp /usr/share/doc/niri/default-config.kdl $HOME/.config/niri/config.kdl 
+NIRI=$HOME/.config/niri/config.kdl 
 
 # Delete
 sed -i '/^\s*\/\//d' "$@" $NIRI  # Delete comments
@@ -64,8 +65,6 @@ spawn-at-startup "swayidle" "-w" "timeout" "300" "qs -c noctalia-shell ipc call 
 prefer-no-csd
 EOF
 
-mkdir -p $HOME/.config/niri
-mv $NIRI ./.config/niri/
 
 sudo echo "QT_QPA_PLATFORMTHEME=gtk3" >> /etc/environment
 
