@@ -1,1 +1,13 @@
+#!bash
 paru -S cloudflared nginx syncthing openlist-bin
+
+
+# Services \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+# Openlist
+read -r -p "Openlist Admin Password: " OPENLIST_PASSWORD
+sudo -u openlist openlist admin set ${OPENLIST_PASSWORD} --data /var/lib/openlist
+sudo systemctl enable openlist && sudo systemctl start openlist
+
+# Cloudflared
+echo "Please Manually Set Cloudflared"
