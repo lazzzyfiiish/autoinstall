@@ -15,7 +15,7 @@ echo "Please Manually Set Cloudflared"
 # Syncthing
 SYNCTHING=$HOME/.local/state/syncthing/config.xml
 sed -i 's/127.0.0.1/0.0.0.0/g' $SYNCTHING
-echo "Please Set Up Synching Urself"
+echo "Please Set Up Syncthing Urself"
 
 # Nginx
 echo "wait"
