@@ -3,9 +3,9 @@
 
 # Daily Use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 paru -S zen-browser-bin \
-syncthing \
 obsidian \
 spotify \
+steam \
 wechat-bin \
 libnotify onlyoffice-bin
 
