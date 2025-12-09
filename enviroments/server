@@ -1,1 +1,8 @@
-echo "Server, sure?"
+#!bash
+
+echo "Begining to install for Server"
+
+bash ./install/0_MIHOMO
+bash ./install/1_ESSENTIAL
+bash ./install/2_DRIVERS
+bash ./install/3_SERVER

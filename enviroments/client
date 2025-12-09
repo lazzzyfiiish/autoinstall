@@ -1,1 +1,10 @@
-echo "OK, Desktop Right?"
+#!bash
+
+echo "Begining to install for Client"
+
+bash ./install/0_MIHOMO
+bash ./install/1_ESSENTIAL
+bash ./install/2_DRIVERS
+bash ./install/3_CLIENT
+bash ./install/4_GUI
+bash ./install/5_USER

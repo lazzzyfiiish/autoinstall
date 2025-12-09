@@ -1,0 +1,15 @@
+#!bash
+
+# Packages \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+paru -S syncthing
+
+# Syncthing \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+systemctl --user enable --now syncthing
+
+# logind \\\\\\\\\\\\\\\\\\\\\\\\
+LOGIN=/etc/systemd/logind.conf
+sudo echo "IdleAction=suspend" > $LOGIN
+sudo echo "IdleActionSec=300s" > $LOGIN
+
+
+

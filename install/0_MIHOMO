@@ -4,7 +4,7 @@
 sudo pacman -S wget
 wget https://github.com/MetaCubeX/mihomo/releases/latest/download/version.txt
 VERSION=$(<version.txt)
-wget -c -t 20 -T 3 -O mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/mihomo-linux-amd64-v${VERSION}.gz
+wget -c -t 25 -T 5 -O mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v${VERSION}/mihomo-linux-amd64-v${VERSION}.gz
 rm version.txt
 gunzip -d mihomo.gz
 chmod +x mihomo

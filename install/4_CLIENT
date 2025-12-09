@@ -1,5 +1,0 @@
-#!bash
-LOGIN=/etc/systemd/logind.conf
-sudo echo "IdleAction=suspend" > $LOGIN
-sudo echo "IdleActionSec=300s" > $LOGIN
-

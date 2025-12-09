@@ -18,3 +18,7 @@ Include = /etc/pacman.d/mirrorlist\
 
 # swap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
+
+# shell: fish \\\\\\\\\\\\\\\\\\\\\\\\\\\
+paru -S fish
+chsh -s /bin/fish $USER

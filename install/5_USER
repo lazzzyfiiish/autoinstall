@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Input Method \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-paru -S fcitx5-im \
-fcitx5-chinese-addons fcitx5-pinyin-zhwiki \
-fcitx5-breeze
 
 # Daily Use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 paru -S zen-browser-bin \
@@ -12,12 +8,5 @@ obsidian \
 spotify \
 wechat-bin \
 libnotify onlyoffice-bin
-
-# Synching \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
-
-
-
-
 
 # Browser Cookies \\\\\\\\\\\\\\\\\\\\\\\\\\
