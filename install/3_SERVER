@@ -13,8 +13,10 @@ sudo systemctl enable --now openlist
 echo "Please Manually Set Cloudflared"
 
 # Syncthing
+systemctl enable --now syncthing@${USER}
 SYNCTHING=$HOME/.local/state/syncthing/config.xml
 sed -i 's/127.0.0.1/0.0.0.0/g' $SYNCTHING
+systemctl restart syncthing@${USER}
 echo "Please Set Up Syncthing Urself"
 
 # Nginx

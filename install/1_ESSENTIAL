@@ -15,6 +15,7 @@ sudo sed -i '/^#\[multilib\]/i\
 [multilib]\
 Include = /etc/pacman.d/mirrorlist\
 ' $PACMAN
+paru -Syyu
 
 # swap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
