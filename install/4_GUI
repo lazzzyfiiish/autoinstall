@@ -68,8 +68,19 @@ spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "swayidle" "-w" "timeout" "300" "qs -c noctalia-shell ipc call lockScreen lock" "timeout" "600" "systemctl suspend" "before-sleep" "qs -c noctalia-shell ipc call lockScreen lock"
 EOF
 
-
 sudo echo "QT_QPA_PLATFORMTHEME=gtk3" >> /etc/environment
+
+cp ./resources/face $HOME/.face
+mkdir -p $HOME/Pictures/Wallpapers
+cp ./resources/wallpaper.png $HOME/Pictures/Wallpapers
+
+## Input \\\\\\\\\\\\\\\\\\\\\\\\\\\\
+sudo cat << EOF >> /etc/environment
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+EOF
 
 # Services \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 systemctl enable ly
