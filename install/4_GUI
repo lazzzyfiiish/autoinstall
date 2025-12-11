@@ -83,4 +83,4 @@ SDL_IM_MODULE=fcitx
 EOF
 
 # Services \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-systemctl enable ly
+systemctl enable ly@tty2
