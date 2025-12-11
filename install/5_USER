@@ -2,6 +2,7 @@
 
 
 # Daily Use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+paru -Syyu
 paru -S zen-browser-bin \
 obsidian \
 spotify \

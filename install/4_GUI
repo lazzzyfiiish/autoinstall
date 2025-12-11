@@ -18,9 +18,9 @@ NIRI=$HOME/.config/niri/config.kdl
 
 ### Delete \\\\\\\\\\\\\\\
 sed -i '/^\s*\/\//d' "$@" $NIRI  # Delete comments
-sed -i 's/waybar/d' $NIRI 
-sed -i 's/fuzzel/d' $NIRI
-sed -i 's/swaylock/d' $NIRI 
+sed -i 's/^waybar/d' $NIRI 
+sed -i 's/^fuzzel/d' $NIRI
+sed -i 's/^swaylock/d' $NIRI 
 
 ### Insert&Append \\\\\\\\\\\
 sed -i '/output "eDP-1"/i\
