@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # AUR \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-git clone https://aur.archlinux.org/paru-bin.git
-cd paru-bin
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
 makepkg -si
 
-PARU=/etc/paru.conf
-sudo sed -i 's/^#BottomUp/BottomUp/g' $PARU
+#PARU=/etc/paru.conf
+#sudo sed -i 's/^#BottomUp/BottomUp/g' $PARU
 
 # pacman \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 PACMAN=/etc/pacman.conf
@@ -15,11 +15,11 @@ sudo sed -i '/^#\[multilib\]/i\
 [multilib]\
 Include = /etc/pacman.d/mirrorlist\
 ' $PACMAN
-paru -Syyu
+yay -Syyu
 
 # swap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
+# sudo echo "zram-size = ram" >> /etc/systemd/zram-generator.conf
 
 # shell: fish \\\\\\\\\\\\\\\\\\\\\\\\\\\
-paru -S fish
+yay -S fish
 chsh -s /bin/fish $USER

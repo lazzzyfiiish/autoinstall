@@ -2,12 +2,12 @@
 
 
 # Daily Use \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-paru -Syyu
-paru -S zen-browser-bin \
+yay -Syyu
+yay -S zen-browser-bin \
 obsidian \
 spotify \
 steam \
 wechat-bin \
-libnotify onlyoffice-bin
+#libnotify onlyoffice-bin
 
 # Browser Cookies \\\\\\\\\\\\\\\\\\\\\\\\\\

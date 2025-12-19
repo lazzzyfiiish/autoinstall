@@ -1,5 +1,5 @@
 #!bash
-paru -S cloudflared nginx syncthing openlist-bin
+yay -S cloudflared nginx syncthing openlist-bin
 
 
 # Services \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
